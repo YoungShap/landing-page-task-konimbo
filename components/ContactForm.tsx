@@ -35,7 +35,7 @@ export default function Home() {
   }
 
   return (
-    <main className="mx-auto flex min-h-screen w-full max-w-lg flex-col justify-center px-6 py-16">
+    <main id="contact" className="mx-auto flex min-h-screen w-full max-w-lg scroll-mt-16 flex-col justify-center px-6 py-16">
       <h1 className="mb-8 text-center text-3xl font-bold tracking-tight sm:text-4xl">
         Contact Us
       </h1>
