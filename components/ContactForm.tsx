@@ -1,6 +1,7 @@
 "use client";
 
-import { FormEvent, useState } from "react";
+import {  useState } from "react";
+import type { FormEvent } from "react";
 
 export default function Home() {
   const [status, setStatus] = useState("");
@@ -8,7 +9,8 @@ export default function Home() {
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
-    const formData = new FormData(event.currentTarget);
+    const form = event.currentTarget;
+    const formData = new FormData(form);
 
     const data = {
       name: formData.get("name"),
@@ -28,7 +30,7 @@ export default function Home() {
 
     if (response.ok) {
       setStatus("Message sent successfully!");
-      event.currentTarget.reset();
+      form.reset();
     } else {
       setStatus("Something went wrong.");
     }

@@ -44,7 +44,7 @@ export default function Hero() {
                 {/* Subheadline */}
                 <p className="mt-6 max-w-2xl text-pretty text-lg leading-relaxed text-neutral-600 sm:text-xl dark:text-neutral-400">
                     A beautifully crafted platform that takes you from idea to launch,
-                    fast. Focus on what matters — we take care of the rest.
+                    fast. <br></br>Focus on what matters — we take care of the rest.
                 </p>
 
                 {/* CTAs */}
