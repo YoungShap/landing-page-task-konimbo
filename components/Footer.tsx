@@ -24,8 +24,18 @@ const socials = [
 
 export default function Footer() {
     return (
-        <footer className="border-t border-neutral-200 dark:border-neutral-800">
-            <div className="mx-auto flex w-full max-w-6xl flex-col items-center gap-5 px-6 py-8 sm:flex-row sm:justify-between">
+        <footer className="relative">
+            {/* Gradient hairline + soft glow instead of a plain border */}
+            <div
+                aria-hidden="true"
+                className="absolute inset-x-0 top-0 h-px bg-[linear-gradient(to_right,transparent,rgba(99,102,241,0.6),rgba(168,85,247,0.6),rgba(14,165,233,0.6),transparent)]"
+            />
+            <div
+                aria-hidden="true"
+                className="pointer-events-none absolute inset-x-8 top-0 h-10 bg-[linear-gradient(to_right,transparent,rgba(99,102,241,0.5),rgba(168,85,247,0.5),rgba(14,165,233,0.5),transparent)] opacity-15 blur-2xl dark:opacity-25"
+            />
+
+            <div className="mx-auto flex w-full max-w-6xl flex-col items-center gap-5 px-6 py-10 sm:flex-row sm:justify-between">
                 {/* Logo */}
                 <a href="#" className="flex items-center gap-2.5">
                     <span className="h-5 w-5 rounded-md bg-gradient-to-br from-indigo-500 via-purple-500 to-sky-500" />
@@ -40,7 +50,7 @@ export default function Footer() {
                         <a
                             key={link.label}
                             href={link.href}
-                            className="text-sm text-neutral-600 transition-colors duration-200 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100"
+                            className="text-sm text-neutral-600 transition-colors duration-200 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100 dark:hover:[text-shadow:0_0_12px_rgba(168,85,247,0.8)]"
                         >
                             {link.label}
                         </a>
