@@ -1,0 +1,122 @@
+.cards {
+    --surface: #ffffff;
+    --border: #e5e5e5;
+    --text: #171717;
+    --muted: #525252;
+    --accent: #6366f1;
+    --glow: rgba(168, 85, 247, 0.18);
+
+    max-width: 72rem;
+    margin: 0 auto;
+    padding: 6rem 1.5rem;
+    text-align: center;
+    scroll-margin-top: 4rem;
+}
+
+.dark .cards {
+    --surface: #171717;
+    --border: #262626;
+    --text: #fafafa;
+    --muted: #a3a3a3;
+    --glow: rgba(168, 85, 247, 0.35);
+}
+
+.cards-eyebrow {
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+}
+
+.cards-title {
+    margin-top: 0.5rem;
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    color: var(--text);
+}
+
+.cards-subtitle {
+    max-width: 36rem;
+    margin: 0.75rem auto 3.5rem;
+    line-height: 1.6;
+    color: var(--muted);
+}
+
+.cards-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 16rem;
+    gap: var(--card-gap, 1rem);
+    min-height: var(--card-h, 18rem);
+    padding: var(--card-pad, 2.25rem);
+    text-align: left;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 1rem;
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent);
+    box-shadow: 0 0 30px var(--glow);
+}
+
+.card-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--icon, 3.25rem);
+    height: var(--icon, 3.25rem);
+    margin-bottom: 0.5rem;
+    border-radius: 0.875rem;
+    color: #fff;
+    background: linear-gradient(135deg, #6366f1, #a855f7, #0ea5e9);
+}
+
+.card-icon svg {
+    width: 50%;
+    height: 50%;
+}
+
+.card h3 {
+    font-size: var(--fs-title, 1.3125rem);
+    font-weight: 600;
+    color: var(--text);
+}
+
+.card p {
+    flex: 1;
+    font-size: var(--fs-body, 1.0625rem);
+    line-height: 1.7;
+    color: var(--muted);
+}
+
+/* Mobile: same design, one size down */
+@media (max-width: 640px) {
+    .cards {
+        --card-gap: 0.75rem;
+        --card-h: 14rem;
+        --card-pad: 1.5rem;
+        --icon: 2.75rem;
+        --fs-title: 1.125rem;
+        --fs-body: 0.9375rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .card,
+    .card:hover {
+        transition: none;
+        transform: none;
+    }
+}

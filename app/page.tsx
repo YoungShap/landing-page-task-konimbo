@@ -1,6 +1,6 @@
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
-// import Content from "../components/Features";
+import CardsSection from "../components/CardSection";
 import ContactForm from "../components/ContactForm";
 // import Footer from "../components/Footer";
 
@@ -10,7 +10,7 @@ export default function Home() {
     <main>
       <Navbar />
       <Hero />
-      {/* <Content /> */}
+      <CardsSection />
       <ContactForm />
       {/* <Footer /> */}
     </main>

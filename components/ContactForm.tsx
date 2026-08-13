@@ -71,7 +71,7 @@ export default function Home() {
 
         <button
           type="submit"
-          className="mt-2 w-full rounded-lg bg-neutral-900 px-4 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-neutral-700 focus:outline-none focus:ring-2 focus:ring-neutral-900/30 focus:ring-offset-2 active:bg-neutral-800 dark:bg-neutral-100 dark:text-neutral-900 dark:hover:bg-neutral-300"
+          className="mt-2 w-full rounded-lg bg-neutral-900 px-4 py-2.5 text-sm font-semibold text-white transition-all hover:bg-neutral-700 focus:outline-none focus:ring-2 focus:ring-neutral-900/30 focus:ring-offset-2 active:bg-neutral-800 dark:bg-neutral-100 dark:text-neutral-900 dark:hover:bg-neutral-300 dark:hover:shadow-[0_0_30px_rgba(168,85,247,0.55)]!"
         >
           Send
         </button>
