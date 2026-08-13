@@ -1,7 +1,8 @@
 .cards,
 .plans {
     --surface: #ffffff;
-    --border: #e5e5e5;
+    --border: #8621b14e;
+    --border-soft: #e5c6f7;
     --text: #171717;
     --muted: #525252;
     --accent: #6366f1;
@@ -12,7 +13,8 @@
 .dark .cards,
 .dark .plans {
     --surface: #171717;
-    --border: #262626;
+    --border: #392b3e;
+    --border-soft: #472958;
     --text: #fafafa;
     --muted: #a3a3a3;
     --glow: rgba(168, 85, 247, 0.35);

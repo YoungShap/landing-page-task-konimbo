@@ -3,7 +3,7 @@ import Hero from "../components/Hero";
 import CardsSection from "../components/CardSection";
 import HowItWorks from "../components/HowItWorks";
 import ContactForm from "../components/ContactForm";
-// import Footer from "../components/Footer";
+import Footer from "../components/Footer";
 
 
 export default function Home() {
@@ -14,7 +14,7 @@ export default function Home() {
       <CardsSection />
       <HowItWorks />
       <ContactForm />
-      {/* <Footer /> */}
+      <Footer />
     </main>
   );
 }
