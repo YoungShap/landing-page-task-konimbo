@@ -1,0 +1,190 @@
+.plans {
+    max-width: 72rem;
+    margin: 0 auto;
+    padding: 6rem 1.5rem;
+    text-align: center;
+    scroll-margin-top: 4rem;
+}
+
+/* Row: side cards vertically centered against the taller featured card */
+.plans-row {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.plan {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-height: 29rem;
+    padding: 2.25rem;
+    text-align: left;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 1.25rem;
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.plan:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent);
+    box-shadow: 0 0 30px var(--glow);
+}
+
+/* Middle card: taller, pre-highlighted, glowing */
+.plan--featured {
+    min-height: 33rem;
+    border-color: var(--accent);
+    box-shadow: 0 0 40px var(--glow);
+}
+
+/* Enterprise: quiet premium — subtle gradient border + gradient name, no glow */
+.plan--premium {
+    border-color: transparent;
+    background:
+        linear-gradient(var(--surface), var(--surface)) padding-box,
+        linear-gradient(135deg, #6366f180, #a855f759, #0ea5e980) border-box;
+}
+
+.plan--premium .plan-cta {
+    border: none;
+    background: linear-gradient(135deg, #c99700, #f3d879 50%, #c99700);
+    color: #241c02b7;
+}
+
+.plan--premium .plan-cta:hover {
+    box-shadow: 0 0 20px rgba(243, 216, 121, 0.45);
+}
+
+.plan--premium h3 {
+    width: fit-content;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.plan-badge {
+    position: absolute;
+    top: -0.8rem;
+    left: 50%;
+    translate: -50%;
+    padding: 0.3rem 0.9rem;
+    border-radius: 99px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    white-space: nowrap;
+    color: #fff;
+    background: var(--gradient);
+}
+
+.plan h3 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--text);
+}
+
+.plan-blurb {
+    margin-top: 0.25rem;
+    font-size: 0.875rem;
+    color: var(--muted);
+}
+
+.plan-price {
+    margin: 1.25rem 0 1.5rem;
+    font-size: 2.75rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--text);
+}
+
+.plan-price span {
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0;
+    color: var(--muted);
+}
+
+/* Feature list fills the card, pushing the CTA to the bottom */
+.plan ul {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.plan li {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.9375rem;
+    color: var(--muted);
+}
+
+.plan li svg {
+    width: 1.125rem;
+    height: 1.125rem;
+    flex-shrink: 0;
+    color: var(--accent);
+}
+
+.plan-cta {
+    margin-top: 1.75rem;
+    padding: 0.8rem;
+    border: 1px solid var(--border);
+    border-radius: 0.75rem;
+    text-align: center;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--text);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.plan-cta:hover {
+    border-color: var(--accent);
+    box-shadow: 0 0 20px var(--glow);
+}
+
+.plan--featured .plan-cta {
+    border: none;
+    background: var(--gradient);
+    color: #fff;
+}
+
+/* Mobile: horizontal snap-scroll carousel instead of a stack */
+@media (max-width: 640px) {
+    .plans-row {
+        overflow-x: auto;
+        padding: 2rem 0.25rem;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none;
+    }
+
+    .plans-row::-webkit-scrollbar {
+        display: none;
+    }
+
+    .plan {
+        flex: 0 0 85%;
+        min-height: 26rem;
+        scroll-snap-align: center;
+    }
+
+    .plan--featured {
+        min-height: 29rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .plan,
+    .plan:hover {
+        transition: none;
+        transform: none;
+    }
+}
