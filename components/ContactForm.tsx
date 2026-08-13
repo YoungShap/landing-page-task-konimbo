@@ -47,7 +47,7 @@ export default function Home() {
       {/* Soft glow behind the card */}
       <div
         aria-hidden="true"
-        className="absolute left-1/2 top-1/2 -z-10 h-[26rem] w-[34rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-br from-indigo-300/30 via-purple-300/20 to-sky-300/30 blur-3xl dark:from-indigo-500/15 dark:via-purple-500/10 dark:to-sky-500/15"
+        className="absolute left-1/2 top-1/2 -z-10 h-[26rem] w-[80%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-br from-indigo-300/30 via-purple-300/20 to-sky-300/30 blur-3xl dark:from-indigo-500/15 dark:via-purple-500/10 dark:to-sky-500/15"
       />
       <h1 className="mt-2 text-center text-3xl font-bold tracking-tight sm:text-4xl">
         Contact Us

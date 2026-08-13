@@ -159,7 +159,7 @@
 /* Mobile: horizontal snap-scroll carousel instead of a stack */
 @media (max-width: 640px) {
     .plans-row {
-        overflow-x: auto;
+        overflow-x: scroll;
         padding: 2rem 0.25rem;
         scroll-snap-type: x mandatory;
         scrollbar-width: none;
