@@ -47,7 +47,7 @@ export default function CardsSection() {
                     <article key={feature.title} className="card">
                         <span className="card-icon">{feature.icon}</span>
                         <h3>{feature.title}</h3>
-                        <p>{feature.text}</p>
+                        <p className="fe">{feature.text}</p>
                     </article>
                 ))}
             </div>

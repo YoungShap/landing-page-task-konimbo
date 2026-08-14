@@ -3,13 +3,12 @@ export default function Hero() {
         <section className="relative isolate flex min-h-[85dvh] flex-col items-center justify-center overflow-hidden px-6 py-24 sm:py-32 dark:bg-gradient-to-b dark:from-[#333333] dark:to-neutral-950">
             {/* Background: soft radial glows + fine grid, both theme-aware */}
             <div aria-hidden="true" className="absolute inset-0 -z-10">
-                <div className="absolute inset-0 bg-gradient-to-b from-indigo-200/80 via-indigo-100/50 to-transparent dark:hidden" />
+                <div className="absolute inset-0 bg-gradient-to-b from-indigo-200 via-indigo-100/100 to-[#293244]/100 dark:hidden" />
                 <div className="absolute left-1/2 top-0 hidden h-[32rem] w-[52rem] -translate-x-1/2 -translate-y-1/3 rounded-full bg-gradient-to-br blur-3xl dark:block dark:from-indigo-500/30 dark:via-purple-500/20" />
                 <div className="absolute bottom-0 right-0 hidden h-80 w-80 translate-x-1/4 translate-y-1/4 rounded-full blur-3xl dark:block dark:bg-sky-500/20" />
-                <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(0,0,0,0.02)_1px,transparent_1px),linear-gradient(to_bottom,rgba(0,0,0,0.02)_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_60%_at_50%_40%,black,transparent)] dark:bg-[linear-gradient(to_right,rgba(255,255,255,0.06)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.06)_1px,transparent_1px)]" />
             </div>
 
-            <div className="mx-auto flex w-full max-w-4xl flex-col items-center text-center">
+            <div className="mx-auto flex w-full max-w-4xl flex-col items-center      text-center">
                 {/* Announcement badge */}
                 <a
                     href="#"
@@ -43,7 +42,7 @@ export default function Hero() {
                 </h1>
 
                 {/* Subheadline */}
-                <p className="mt-6 max-w-2xl text-pretty text-lg leading-relaxed text-neutral-600 sm:text-xl dark:text-neutral-400">
+                <p className="mt-6 max-w-2xl text-black/400 text-lg leading-relaxed text-neutral-600 sm:text-xl dark:text-neutral-400">
                     A beautifully crafted platform that takes you from idea to launch,
                     fast. <br></br>Focus on what matters — we take care of the rest.
                 </p>
@@ -109,7 +108,7 @@ export default function Hero() {
                                 </svg>
                             ))}
                         </div>
-                        <p className="text-sm text-neutral-500 dark:text-neutral-400">
+                        <p className="text-sm font-semibold text-[#dbdbdb] dark:text-neutral-400">
                             Trusted by 2,000+ early users
                         </p>
                     </div>

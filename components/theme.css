@@ -1,12 +1,12 @@
 .cards,
 .plans {
-    --surface: #ffffff;
+    --surface: #1d222c;
     --border: #8621b14e;
     --border-soft: #e5c6f7;
-    --text: #171717;
-    --muted: #525252;
+    --text: #faf6dd;
+    --muted: #6e6e6e;
     --accent: #6366f1;
-    --glow: rgba(168, 85, 247, 0.18);
+    --glow: rgba(88, 85, 247, 0.55);
     --gradient: linear-gradient(135deg, #6366f1, #a855f7, #0ea5e9);
 }
 
@@ -36,7 +36,12 @@
     font-size: clamp(1.75rem, 4vw, 2.5rem);
     font-weight: 700;
     letter-spacing: -0.025em;
-    color: var(--text);
+    color: #383838;
+}
+
+.dark .cards-title,
+.dark .plans-title {
+    color: #ebeaea;
 }
 
 .cards-subtitle,

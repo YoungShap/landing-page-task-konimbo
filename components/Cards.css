@@ -60,7 +60,7 @@
     flex: 1;
     font-size: var(--fs-body, 1.0625rem);
     line-height: 1.7;
-    color: var(--muted);
+    color: #a3a3a3;
 }
 
 /* Mobile: same design, one size down */

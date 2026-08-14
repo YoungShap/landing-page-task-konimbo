@@ -1,6 +1,6 @@
 "use client";
 
-import {  useState } from "react";
+import { useState } from "react";
 import type { FormEvent } from "react";
 
 export default function Home() {
@@ -37,10 +37,10 @@ export default function Home() {
   }
 
   const fieldClasses =
-    "w-full rounded-xl border border-neutral-300 bg-neutral-50 px-4 py-2.5 text-sm placeholder:text-neutral-400 transition-colors focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 dark:border-neutral-700 dark:bg-neutral-950/40 dark:placeholder:text-neutral-500 dark:focus:border-indigo-400 dark:focus:ring-indigo-400/20";
+    "w-full rounded-xl text-white border border-neutral-700 px-4 py-2.5 text-sm placeholder:text-neutral-400 transition-colors dark:border-neutral-700  dark:bg-neutral-950/40 dark:placeholder:text-neutral-500 focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 dark:focus:border-indigo-400 dark:focus:ring-indigo-400/20";
 
   const labelClasses =
-    "text-sm font-medium text-neutral-700 dark:text-neutral-300";
+    "text-md font-medium text-neutral-300";
 
   return (
     <main id="contact" className="relative isolate mx-auto flex min-h-screen w-full max-w-xl scroll-mt-16 flex-col justify-center px-6 py-16">
@@ -49,7 +49,8 @@ export default function Home() {
         aria-hidden="true"
         className="absolute left-1/2 top-1/2 -z-10 h-[26rem] w-[80%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-br from-indigo-300/30 via-purple-300/20 to-sky-300/30 blur-3xl dark:from-indigo-500/15 dark:via-purple-500/10 dark:to-sky-500/15"
       />
-      <h1 className="mt-2 text-center text-3xl font-bold tracking-tight sm:text-4xl">
+      <p className="text-center text-lg font-semibold tracking-[0.1em] uppercase text-[#6366f1] m-2">Let's Get in Touch</p>
+      <h1 className="mt-2 text-center text-[#383838] dark:text-[#ebeaea] text-3xl font-bold tracking-tight sm:text-4xl">
         Contact Us
       </h1>
       <p className="mx-auto mb-10 mt-3 max-w-md text-center leading-relaxed text-neutral-600 dark:text-neutral-400">
@@ -59,7 +60,7 @@ export default function Home() {
 
       <form
         onSubmit={handleSubmit}
-        className="flex flex-col gap-5 rounded-3xl border border-neutral-200 bg-white/80 p-6 shadow-xl shadow-neutral-900/5 backdrop-blur sm:p-8 dark:border-neutral-800 dark:bg-neutral-900/80 dark:shadow-black/20"
+        className="flex flex-col gap-5 rounded-3xl border bg-[#1d222c] p-6 shadow-[0px_20px_20px_10px_rgba(0,0,0,0.08)] backdrop-blur sm:p-8 dark:border-neutral-800 dark:bg-neutral-900/80 dark:shadow-none border-purple-200"
       >
         <div className="grid gap-5 sm:grid-cols-2">
           <div className="flex flex-col gap-1.5">
