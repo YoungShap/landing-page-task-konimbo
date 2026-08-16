@@ -1,21 +1,16 @@
 export default function Hero() {
     return (
         <section className="relative isolate flex min-h-[85dvh] flex-col items-center justify-center overflow-hidden px-6 py-24 sm:py-32 dark:bg-gradient-to-b dark:from-[#333333] dark:to-neutral-950">
-            {/* Background: soft radial glows + fine grid, both theme-aware */}
             <div aria-hidden="true" className="absolute inset-0 -z-10">
-                {/* Light mode: dark slate hero (same #1d222c family as the cards / contact form) so it sits as a bold band above the light page */}
                 <div className="absolute inset-0 bg-[linear-gradient(to_bottom,#2b3142_0%,#1d222c_55%,#151920_100%)] dark:hidden" />
-                {/* Light mode: brand glows on the dark surface — a bit stronger than dark mode's since the slate is lighter */}
                 <div className="absolute left-1/2 top-0 h-[32rem] w-[56rem] -translate-x-1/2 -translate-y-1/3 rounded-full bg-gradient-to-br from-indigo-500/45 via-purple-500/30 to-transparent blur-3xl dark:hidden" />
                 <div className="absolute bottom-0 right-0 h-96 w-96 translate-x-1/4 translate-y-1/4 rounded-full bg-sky-500/30 blur-3xl dark:hidden" />
                 <div className="absolute bottom-0 left-0 h-80 w-80 -translate-x-1/4 translate-y-1/3 rounded-full bg-purple-500/25 blur-3xl dark:hidden" />
-                {/* Dark mode glows (unchanged) */}
                 <div className="absolute left-1/2 top-0 hidden h-[32rem] w-[52rem] -translate-x-1/2 -translate-y-1/3 rounded-full bg-gradient-to-br blur-3xl dark:block dark:from-indigo-500/30 dark:via-purple-500/20" />
                 <div className="absolute bottom-0 right-0 hidden h-80 w-80 translate-x-1/4 translate-y-1/4 rounded-full blur-3xl dark:block dark:bg-sky-500/20" />
             </div>
 
             <div className="mx-auto flex w-full max-w-4xl flex-col items-center      text-center">
-                {/* Announcement badge */}
                 <a
                     href="#"
                     className="group mb-8 inline-flex cursor-pointer items-center gap-2 rounded-full border border-white/15 bg-white/10 py-1.5 pl-4 pr-3 text-sm text-neutral-300 shadow-sm backdrop-blur transition-colors duration-200 hover:border-white/25 hover:text-white dark:border-neutral-800 dark:bg-neutral-900/60 dark:text-neutral-400 dark:hover:border-neutral-700 dark:hover:text-neutral-100"

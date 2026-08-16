@@ -61,9 +61,7 @@ export default function HowItWorks() {
                 (row.clientWidth - featured.clientWidth) / 2;
         }
 
-        // After first paint, so it wins over the browser's initial snap
         const raf = requestAnimationFrame(center);
-        // Re-center when the viewport changes (devtools toggle, rotation)
         window.addEventListener("resize", center);
         return () => {
             cancelAnimationFrame(raf);

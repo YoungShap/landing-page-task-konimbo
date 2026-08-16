@@ -2,25 +2,18 @@
 .plans {
     --surface: #1d222c;
     --border: #8621b14e;
-    /* Light mode: a visible muted-purple border (like dark mode's) so cards read as outlined, not just glowing */
     --border-soft: #4a3f6e;
-    /* Light mode: warm-neutral off-white text — white-toned (no cream cast) with a touch of warmth */
     --text: #faf7ef;
     --body: #c5c1c1;
     --muted: #9c9899;
     --accent: #6366f1;
-    /* Light mode: quieter, tighter glows so neighbouring cards' halos don't bleed into the Pro card */
-    --glow: rgba(88, 85, 247, 0.35);
-    /* Plan CTA buttons keep the original (pre-tone-down) glow strength */
+     --glow: rgba(88, 85, 247, 0.35);
     --cta-glow: rgba(88, 85, 247, 0.55);
     --glow-hover: 0 0 24px rgba(88, 85, 247, 0.48), 0 0 0 1px rgba(99, 102, 241, 0.4);
-    /* Feature cards have no always-lit neighbour, so they can afford a fuller hover glow */
     --glow-hover-card: 0 0 32px rgba(88, 85, 247, 0.55), 0 0 0 1px rgba(99, 102, 241, 0.5);
     --glow-featured: 0 0 30px rgba(88, 85, 247, 0.55), 0 0 0 1px rgba(99, 102, 241, 0.6);
     --gradient: linear-gradient(135deg, #6366f1, #a855f7, #0ea5e9);
-    /* Light mode: soft resting shadow so dark cards lift off the lavender page */
     --rest-shadow: 0 18px 40px -16px rgba(30, 27, 75, 0.5);
-    /* Light mode: keep the same shadow under the glow on hover */
     --hover-rest-shadow: var(--rest-shadow);
 }
 
@@ -30,19 +23,16 @@
     --border: #392b3e;
     --border-soft: #472958;
     --text: #fafafa;
-    --body: #a3a3a3; /* unchanged dark-mode body copy */
+    --body: #a3a3a3; 
     --muted: #a3a3a3;
     --glow: rgba(168, 85, 247, 0.35);
     --glow-hover: 0 0 30px var(--glow);
-    --glow-hover-card: 0 0 30px var(--glow); /* unchanged dark-mode card hover */
+    --glow-hover-card: 0 0 30px var(--glow);
     --glow-featured: 0 0 40px var(--glow);
-    /* Dark mode: hairline top-edge highlight + soft dark drop so cards have resting depth (glow stays hover-only / Pro-only) */
     --rest-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.07), 0 16px 36px -14px rgba(0, 0, 0, 0.75);
-    /* Dark mode hover: keep the hairline, drop the black drop so the glow reads clean */
     --hover-rest-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.07);
 }
 
-/* Shared section headers (eyebrow / title / subtitle) */
 .cards-eyebrow,
 .plans-eyebrow {
     font-size: 18px;
@@ -71,10 +61,10 @@
     max-width: 36rem;
     margin: 0.75rem auto 3.5rem;
     line-height: 1.6;
-    color: #6e6e6e; /* light page: keep the original darker grey for contrast */
+    color: #6e6e6e; 
 }
 
 .dark .cards-subtitle,
 .dark .plans-subtitle {
-    color: var(--muted); /* unchanged dark-mode subtitle */
+    color: var(--muted); 
 }

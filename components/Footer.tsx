@@ -25,7 +25,6 @@ const socials = [
 export default function Footer() {
     return (
         <footer className="relative isolate overflow-hidden bg-[linear-gradient(to_bottom,#1d222c,#141821)] dark:bg-none">
-            {/* Gradient hairline + soft glow instead of a plain border */}
             <div
                 aria-hidden="true"
                 className="absolute inset-x-0 top-0 h-px bg-[linear-gradient(to_right,transparent,#6366f1,#a855f7,#0ea5e9,transparent)] dark:bg-[linear-gradient(to_right,transparent,rgba(99,102,241,0.6),rgba(168,85,247,0.6),rgba(14,165,233,0.6),transparent)]"
@@ -34,13 +33,10 @@ export default function Footer() {
                 aria-hidden="true"
                 className="pointer-events-none absolute inset-x-8 top-0 h-10 bg-[linear-gradient(to_right,transparent,rgba(99,102,241,0.5),rgba(168,85,247,0.5),rgba(14,165,233,0.5),transparent)] opacity-60 blur-2xl dark:opacity-25"
             />
-            {/* Light mode only: one restrained indigo glow behind the centre, no colour blobs */}
             <div
                 aria-hidden="true"
                 className="pointer-events-none absolute left-1/2 top-1/2 -z-10 h-40 w-[40rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-indigo-500/15 blur-3xl dark:hidden"
             />
-
-            {/* 3-column grid on sm+ so the links group is truly page-centred (matches the centred copyright below) */}
             <div className="mx-auto flex w-full max-w-6xl flex-col items-center gap-5 px-6 pt-10 pb-6 sm:grid sm:grid-cols-3 sm:items-center dark:py-10">
                 {/* Logo */}
                 <a href="#" className="flex items-center gap-2.5 sm:justify-self-start">

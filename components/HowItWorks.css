@@ -6,7 +6,6 @@
     scroll-margin-top: 4rem;
 }
 
-/* Row: side cards vertically centered against the taller featured card */
 .plans-row {
     display: flex;
     align-items: center;
@@ -34,14 +33,12 @@
     box-shadow: var(--glow-hover), var(--hover-rest-shadow);
 }
 
-/* Middle card: taller, pre-highlighted, glowing */
 .plan--featured {
     min-height: 33rem;
     border-color: var(--accent);
     box-shadow: var(--glow-featured), var(--rest-shadow);
 }
 
-/* Enterprise: quiet premium — subtle gradient border + gradient name, no glow */
 .plan--premium {
     border-color: transparent;
     background:
@@ -108,7 +105,6 @@
     color: var(--muted);
 }
 
-/* Feature list fills the card, pushing the CTA to the bottom */
 .plan ul {
     display: flex;
     flex: 1;

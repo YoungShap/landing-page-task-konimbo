@@ -36,7 +36,6 @@ export default function Home() {
     }
   }
 
-  // Light mode: subtle frosted fields on the dark card. Dark mode overrides below keep its original look.
   const fieldClasses =
     "w-full rounded-xl text-white border border-white/10 bg-white/5 px-4 py-2.5 text-sm placeholder:text-neutral-400 transition-colors hover:border-white/20 dark:border-neutral-700 dark:bg-neutral-950/40 dark:placeholder:text-neutral-500 dark:hover:border-neutral-700 focus:border-indigo-400 focus:bg-white/10 focus:outline-none focus:ring-2 focus:ring-indigo-400/30 dark:focus:border-indigo-400 dark:focus:bg-neutral-950/40 dark:focus:ring-indigo-400/20";
 
@@ -45,7 +44,6 @@ export default function Home() {
 
   return (
     <main id="contact" className="relative isolate mx-auto flex min-h-screen w-full max-w-xl scroll-mt-16 flex-col justify-center px-6 py-16">
-      {/* Dark mode: soft glow centered behind the whole section (unchanged) */}
       <div
         aria-hidden="true"
         className="absolute left-1/2 top-1/2 -z-10 hidden h-[26rem] w-[80%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-br from-indigo-500/15 via-purple-500/10 to-sky-500/15 blur-3xl dark:block"
@@ -60,7 +58,6 @@ export default function Home() {
       </p>
 
       <div className="relative">
-        {/* Light mode: tight back-light sitting directly behind the card, offset down so it never reaches the heading */}
         <div
           aria-hidden="true"
           className="absolute inset-x-2 top-14 -bottom-3 -z-10 rounded-3xl bg-gradient-to-br from-indigo-500/60 via-fuchsia-500/50 to-sky-500/60 blur-2xl dark:hidden"
@@ -70,7 +67,6 @@ export default function Home() {
         onSubmit={handleSubmit}
         className="relative flex flex-col gap-5 overflow-hidden rounded-3xl border border-[#8621b14e] bg-[#1d222c] p-6 shadow-[0_0_56px_-8px_rgba(139,92,246,0.45),0_25px_50px_-12px_rgba(0,0,0,0.25)] backdrop-blur sm:p-8 before:pointer-events-none before:absolute before:inset-x-0 before:top-0 before:h-1 before:bg-gradient-to-r before:from-indigo-500 before:via-purple-500 before:to-sky-500 dark:border-neutral-800 dark:bg-neutral-900/80 dark:shadow-none"
       >
-        {/* Gradient mail badge, matches the feature-card icons */}
         <div className="flex justify-center">
           <span
             aria-hidden="true"
