@@ -60,12 +60,12 @@ export default function Home() {
       <div className="relative">
         <div
           aria-hidden="true"
-          className="absolute inset-x-2 top-14 -bottom-3 -z-10 rounded-3xl bg-gradient-to-br from-indigo-500/60 via-fuchsia-500/50 to-sky-500/60 blur-2xl dark:hidden"
+          className="absolute inset-x-3 top-16 -bottom-2 -z-10 rounded-3xl bg-gradient-to-br from-indigo-500/45 via-fuchsia-500/36 to-sky-500/45 blur-2xl sm:inset-x-2 sm:top-12 sm:-bottom-3 sm:from-indigo-500/52 sm:via-fuchsia-500/44 sm:to-sky-500/52 dark:hidden"
         />
 
       <form
         onSubmit={handleSubmit}
-        className="relative flex flex-col gap-5 overflow-hidden rounded-3xl border border-[#8621b14e] bg-[#1d222c] p-6 shadow-[0_0_56px_-8px_rgba(139,92,246,0.45),0_25px_50px_-12px_rgba(0,0,0,0.25)] backdrop-blur sm:p-8 before:pointer-events-none before:absolute before:inset-x-0 before:top-0 before:h-1 before:bg-gradient-to-r before:from-indigo-500 before:via-purple-500 before:to-sky-500 dark:border-neutral-800 dark:bg-neutral-900/80 dark:shadow-none"
+        className="relative flex flex-col gap-5 overflow-hidden rounded-3xl border border-[#8621b14e] bg-[#1d222c] p-6 shadow-[0_0_52px_-8px_rgba(139,92,246,0.38),0_18px_40px_-16px_rgba(30,27,75,0.5),0_25px_50px_-12px_rgba(0,0,0,0.25)] backdrop-blur sm:p-8 before:pointer-events-none before:absolute before:inset-x-0 before:top-0 before:h-1 before:bg-gradient-to-r before:from-indigo-500 before:via-purple-500 before:to-sky-500 dark:border-neutral-800 dark:bg-neutral-900/80 dark:shadow-[inset_0_1px_0_rgba(255,255,255,0.07),0_16px_36px_-14px_rgba(0,0,0,0.75)]"
       >
         <div className="flex justify-center">
           <span
