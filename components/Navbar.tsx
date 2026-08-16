@@ -62,7 +62,7 @@ export default function Navbar() {
     }
 
     return (
-        <header className="sticky top-0 z-50 border-b border-neutral-200 bg-white/70 backdrop-blur dark:border-neutral-800 dark:bg-neutral-950/70">
+        <header className="sticky top-0 z-50 border-b border-indigo-950/10 bg-[#f4f3fa]/70 backdrop-blur dark:border-neutral-800 dark:bg-neutral-950/70">
             <nav className="mx-auto flex h-16 w-full max-w-6xl items-center justify-between px-6">
                 {/* Logo */}
                 <a href="#" className="flex items-center gap-2.5">
@@ -131,7 +131,7 @@ export default function Navbar() {
             {/* Mobile menu — animates open/closed via grid-rows (0fr -> 1fr) */}
             <div
                 id="mobile-menu"
-                className={`absolute inset-x-0 top-16 grid border-b border-neutral-200 bg-white/90 backdrop-blur transition-all duration-300 ease-out sm:hidden motion-reduce:transition-none dark:border-neutral-800 dark:bg-neutral-950/90 ${menuOpen
+                className={`absolute inset-x-0 top-16 grid border-b border-indigo-950/10 bg-[#f4f3fa]/90 backdrop-blur transition-all duration-300 ease-out sm:hidden motion-reduce:transition-none dark:border-neutral-800 dark:bg-neutral-950/90 ${menuOpen
                         ? "visible grid-rows-[1fr] opacity-100"
                         : "invisible grid-rows-[0fr] opacity-0"
                     }`}

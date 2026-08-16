@@ -24,13 +24,14 @@
     background: var(--surface);
     border: 1px solid var(--border);
     border-radius: 1rem;
+    box-shadow: var(--rest-shadow);
     transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .card:hover {
     transform: translateY(-4px);
     border-color: var(--accent);
-    box-shadow: 0 0 30px var(--glow);
+    box-shadow: var(--glow-hover-card), var(--hover-rest-shadow);
 }
 
 .card-icon {
@@ -60,7 +61,7 @@
     flex: 1;
     font-size: var(--fs-body, 1.0625rem);
     line-height: 1.7;
-    color: #a3a3a3;
+    color: var(--body, #a3a3a3);
 }
 
 /* Mobile: same design, one size down */

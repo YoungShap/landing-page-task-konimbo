@@ -24,20 +24,21 @@
     background: var(--surface);
     border: 1px solid var(--border-soft);
     border-radius: 1.25rem;
+    box-shadow: var(--rest-shadow);
     transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .plan:hover {
     transform: translateY(-4px);
     border-color: var(--accent);
-    box-shadow: 0 0 30px var(--glow);
+    box-shadow: var(--glow-hover), var(--hover-rest-shadow);
 }
 
 /* Middle card: taller, pre-highlighted, glowing */
 .plan--featured {
     min-height: 33rem;
     border-color: var(--accent);
-    box-shadow: 0 0 40px var(--glow);
+    box-shadow: var(--glow-featured), var(--rest-shadow);
 }
 
 /* Enterprise: quiet premium — subtle gradient border + gradient name, no glow */
@@ -123,7 +124,7 @@
     align-items: center;
     gap: 0.6rem;
     font-size: 0.9375rem;
-    color: #a3a3a3;
+    color: var(--body, #a3a3a3);
 }
 
 .plan li svg {
@@ -147,7 +148,7 @@
 
 .plan-cta:hover {
     border-color: var(--accent);
-    box-shadow: 0 0 20px var(--glow);
+    box-shadow: 0 0 20px var(--cta-glow, var(--glow));
 }
 
 .plan--featured .plan-cta {

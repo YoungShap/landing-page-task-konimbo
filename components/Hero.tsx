@@ -3,7 +3,13 @@ export default function Hero() {
         <section className="relative isolate flex min-h-[85dvh] flex-col items-center justify-center overflow-hidden px-6 py-24 sm:py-32 dark:bg-gradient-to-b dark:from-[#333333] dark:to-neutral-950">
             {/* Background: soft radial glows + fine grid, both theme-aware */}
             <div aria-hidden="true" className="absolute inset-0 -z-10">
-                <div className="absolute inset-0 bg-gradient-to-b from-indigo-200 via-indigo-100/100 to-[#293244]/100 dark:hidden" />
+                {/* Light mode: dark slate hero (same #1d222c family as the cards / contact form) so it sits as a bold band above the light page */}
+                <div className="absolute inset-0 bg-[linear-gradient(to_bottom,#2b3142_0%,#1d222c_55%,#151920_100%)] dark:hidden" />
+                {/* Light mode: brand glows on the dark surface — a bit stronger than dark mode's since the slate is lighter */}
+                <div className="absolute left-1/2 top-0 h-[32rem] w-[56rem] -translate-x-1/2 -translate-y-1/3 rounded-full bg-gradient-to-br from-indigo-500/45 via-purple-500/30 to-transparent blur-3xl dark:hidden" />
+                <div className="absolute bottom-0 right-0 h-96 w-96 translate-x-1/4 translate-y-1/4 rounded-full bg-sky-500/30 blur-3xl dark:hidden" />
+                <div className="absolute bottom-0 left-0 h-80 w-80 -translate-x-1/4 translate-y-1/3 rounded-full bg-purple-500/25 blur-3xl dark:hidden" />
+                {/* Dark mode glows (unchanged) */}
                 <div className="absolute left-1/2 top-0 hidden h-[32rem] w-[52rem] -translate-x-1/2 -translate-y-1/3 rounded-full bg-gradient-to-br blur-3xl dark:block dark:from-indigo-500/30 dark:via-purple-500/20" />
                 <div className="absolute bottom-0 right-0 hidden h-80 w-80 translate-x-1/4 translate-y-1/4 rounded-full blur-3xl dark:block dark:bg-sky-500/20" />
             </div>
@@ -12,7 +18,7 @@ export default function Hero() {
                 {/* Announcement badge */}
                 <a
                     href="#"
-                    className="group mb-8 inline-flex cursor-pointer items-center gap-2 rounded-full border border-neutral-200 bg-white/60 py-1.5 pl-4 pr-3 text-sm text-neutral-600 shadow-sm backdrop-blur transition-colors duration-200 hover:border-neutral-300 hover:text-neutral-900 dark:border-neutral-800 dark:bg-neutral-900/60 dark:text-neutral-400 dark:hover:border-neutral-700 dark:hover:text-neutral-100"
+                    className="group mb-8 inline-flex cursor-pointer items-center gap-2 rounded-full border border-white/15 bg-white/10 py-1.5 pl-4 pr-3 text-sm text-neutral-300 shadow-sm backdrop-blur transition-colors duration-200 hover:border-white/25 hover:text-white dark:border-neutral-800 dark:bg-neutral-900/60 dark:text-neutral-400 dark:hover:border-neutral-700 dark:hover:text-neutral-100"
                 >
                     <span className="relative flex h-2 w-2">
                         <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-indigo-400 opacity-75 motion-reduce:animate-none" />
@@ -34,7 +40,7 @@ export default function Hero() {
                 </a>
 
                 {/* Headline */}
-                <h1 className="text-balance text-4xl font-bold tracking-tight text-neutral-900 sm:text-6xl lg:text-7xl dark:text-neutral-50">
+                <h1 className="text-balance text-4xl font-bold tracking-tight text-white sm:text-6xl lg:text-7xl dark:text-neutral-50">
                     Everything you need to{" "}
                     <span className="bg-gradient-to-r from-indigo-500 via-purple-500 to-sky-500 bg-clip-text text-transparent">
                         launch with confidence
@@ -42,7 +48,7 @@ export default function Hero() {
                 </h1>
 
                 {/* Subheadline */}
-                <p className="mt-6 max-w-2xl text-black/400 text-lg leading-relaxed text-neutral-600 sm:text-xl dark:text-neutral-400">
+                <p className="mt-6 max-w-2xl text-lg leading-relaxed text-neutral-300 sm:text-xl dark:text-neutral-400">
                     A beautifully crafted platform that takes you from idea to launch,
                     fast. <br></br>Focus on what matters — we take care of the rest.
                 </p>
@@ -51,7 +57,7 @@ export default function Hero() {
                 <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row">
                     <a
                         href="#"
-                        className="inline-flex w-full cursor-pointer items-center justify-center gap-2 rounded-xl bg-neutral-900 px-7 py-3.5 text-sm font-semibold text-white shadow-lg shadow-neutral-900/10 transition-all duration-200 hover:-translate-y-0.5 hover:bg-neutral-700 hover:shadow-xl hover:shadow-neutral-900/15 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-900 motion-reduce:hover:translate-y-0 sm:w-auto dark:bg-neutral-100 dark:text-neutral-900 dark:shadow-black/30 dark:hover:bg-neutral-300 dark:hover:shadow-[0_0_36px_rgba(168,85,247,0.65)]! dark:focus-visible:outline-neutral-100"
+                        className="inline-flex w-full cursor-pointer items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-indigo-500 via-purple-500 to-sky-500 px-7 py-3.5 text-sm font-semibold text-white shadow-lg shadow-purple-500/25 transition-all duration-200 hover:-translate-y-0.5 hover:brightness-110 hover:shadow-xl hover:shadow-purple-500/40 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400 motion-reduce:hover:translate-y-0 sm:w-auto dark:shadow-[0_0_24px_rgba(168,85,247,0.35)] dark:ring-1 dark:ring-white/15 dark:hover:shadow-[0_0_40px_rgba(168,85,247,0.7)]! dark:focus-visible:outline-indigo-400"
                     >
                         Get started free
                         <svg
@@ -69,7 +75,7 @@ export default function Hero() {
                     </a>
                     <a
                         href="#"
-                        className="inline-flex w-full cursor-pointer items-center justify-center rounded-xl border border-neutral-300 bg-white/60 px-7 py-3.5 text-sm font-semibold text-neutral-700 backdrop-blur transition-all duration-200 hover:border-neutral-400 hover:bg-white hover:text-neutral-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-400 sm:w-auto dark:border-neutral-700 dark:bg-neutral-900/60 dark:text-neutral-300 dark:hover:border-neutral-600 dark:hover:bg-neutral-900 dark:hover:text-neutral-100 dark:hover:shadow-[0_0_30px_rgba(168,85,247,0.55)]!"
+                        className="inline-flex w-full cursor-pointer items-center justify-center rounded-xl border border-white/20 bg-white/10 px-7 py-3.5 text-sm font-semibold text-neutral-100 backdrop-blur transition-all duration-200 hover:border-white/35 hover:bg-white/15 hover:text-white hover:shadow-[0_0_30px_rgba(168,85,247,0.35)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-400 sm:w-auto dark:border-neutral-700 dark:bg-neutral-900/60 dark:text-neutral-300 dark:hover:border-neutral-600 dark:hover:bg-neutral-900 dark:hover:text-neutral-100 dark:hover:shadow-[0_0_30px_rgba(168,85,247,0.55)]!"
                     >
                         See how it works
                     </a>
@@ -78,11 +84,11 @@ export default function Hero() {
                 {/* Social proof */}
                 <div className="mt-14 flex flex-col items-center gap-3 sm:flex-row sm:gap-5">
                     <div className="flex -space-x-2.5">
-                        <span className="h-9 w-9 rounded-full border-2 border-white bg-gradient-to-br from-rose-400 to-orange-300 dark:border-neutral-900" />
-                        <span className="h-9 w-9 rounded-full border-2 border-white bg-gradient-to-br from-indigo-400 to-sky-300 dark:border-neutral-900" />
-                        <span className="h-9 w-9 rounded-full border-2 border-white bg-gradient-to-br from-emerald-400 to-teal-300 dark:border-neutral-900" />
-                        <span className="h-9 w-9 rounded-full border-2 border-white bg-gradient-to-br from-purple-400 to-fuchsia-300 dark:border-neutral-900" />
-                        <span className="inline-flex h-9 w-9 items-center justify-center rounded-full border-2 border-white bg-neutral-100 text-[10px] font-semibold text-neutral-600 dark:border-neutral-900 dark:bg-neutral-800 dark:text-neutral-300">
+                        <span className="h-9 w-9 rounded-full border-2 border-[#1d222c] bg-gradient-to-br from-rose-400 to-orange-300 dark:border-neutral-900" />
+                        <span className="h-9 w-9 rounded-full border-2 border-[#1d222c] bg-gradient-to-br from-indigo-400 to-sky-300 dark:border-neutral-900" />
+                        <span className="h-9 w-9 rounded-full border-2 border-[#1d222c] bg-gradient-to-br from-emerald-400 to-teal-300 dark:border-neutral-900" />
+                        <span className="h-9 w-9 rounded-full border-2 border-[#1d222c] bg-gradient-to-br from-purple-400 to-fuchsia-300 dark:border-neutral-900" />
+                        <span className="inline-flex h-9 w-9 items-center justify-center rounded-full border-2 border-[#1d222c] bg-neutral-700 text-[10px] font-semibold text-neutral-100 dark:border-neutral-900 dark:bg-neutral-800 dark:text-neutral-300">
                             2k+
                         </span>
                     </div>
@@ -108,7 +114,7 @@ export default function Hero() {
                                 </svg>
                             ))}
                         </div>
-                        <p className="text-sm font-semibold text-[#dbdbdb] dark:text-neutral-400">
+                        <p className="text-sm font-semibold text-neutral-300 dark:text-neutral-400">
                             Trusted by 2,000+ early users
                         </p>
                     </div>
