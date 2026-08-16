@@ -1,6 +1,6 @@
 # Landing Page
 
-A single-page marketing site built with **Next.js 16 (App Router)**, **React 19**, **TypeScript** and **Tailwind CSS v4**.
+A single-page marketing site built with **Next.js 16 (App Router)**, **React 19**, **TypeScript** and **Tailwind CSS v4** + **Vanilla CSS**.
 It ships with a light/dark theme toggle and a contact form whose submissions are saved as records in an **Airtable** base through a server-side API route (your Airtable token never reaches the browser).
 
 ## Table of contents
