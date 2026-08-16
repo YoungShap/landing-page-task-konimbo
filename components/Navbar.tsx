@@ -62,12 +62,12 @@ export default function Navbar() {
     }
 
     return (
-        <header className="sticky top-0 z-50 border-b border-indigo-950/10 bg-[#f4f3fa]/70 backdrop-blur dark:border-neutral-800 dark:bg-neutral-950/70">
+        <header className="sticky top-0 z-50 border-b border-indigo-950/10 bg-[#e0dff0]/75 backdrop-blur dark:border-neutral-800 dark:bg-neutral-950/70">
             <nav className="mx-auto flex h-16 w-full max-w-6xl items-center justify-between px-6">
                 {/* Logo */}
                 <a href="#" className="flex items-center gap-2.5">
                     <span className="h-6 w-6 rounded-md bg-gradient-to-br from-indigo-500 via-purple-500 to-sky-500" />
-                    <span className="text-base font-bold tracking-tight text-neutral-900 dark:text-neutral-50">
+                    <span className="text-base font-extrabold tracking-tight text-neutral-900 dark:text-neutral-50">
                         Brand
                     </span>
                 </a>
@@ -79,7 +79,7 @@ export default function Navbar() {
                             key={link.label}
                             href={link.href}
                             onClick={() => handleLinkClick(link.label)}
-                            className={`text-sm font-medium transition-colors duration-200 ${activeLink === link.label
+                            className={`text-sm font-semibold transition-colors duration-200 ${activeLink === link.label
                                     ? "text-neutral-900 dark:text-neutral-50 dark:[text-shadow:0_0_14px_rgba(168,85,247,0.9)]"
                                     : "text-neutral-600 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100"
                                 }`}
@@ -95,7 +95,7 @@ export default function Navbar() {
 
                     <a
                         href="#"
-                        className="hidden items-center rounded-lg bg-neutral-900 px-4 py-2 text-sm font-semibold text-white transition-all duration-200 hover:bg-neutral-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-900 sm:inline-flex dark:bg-neutral-100 dark:text-neutral-900 dark:hover:bg-neutral-300 dark:focus-visible:outline-neutral-100"
+                        className="hidden items-center rounded-lg bg-neutral-900 px-4 py-2 text-sm font-bold text-white transition-all duration-200 hover:bg-neutral-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-900 sm:inline-flex dark:bg-neutral-100 dark:text-neutral-900 dark:hover:bg-neutral-300 dark:focus-visible:outline-neutral-100"
                     >
                         Get started
                     </a>
@@ -131,7 +131,7 @@ export default function Navbar() {
             {/* Mobile menu — animates open/closed via grid-rows (0fr -> 1fr) */}
             <div
                 id="mobile-menu"
-                className={`absolute inset-x-0 top-16 grid border-b border-indigo-950/10 bg-[#f4f3fa]/90 backdrop-blur transition-all duration-300 ease-out sm:hidden motion-reduce:transition-none dark:border-neutral-800 dark:bg-neutral-950/90 ${menuOpen
+                className={`absolute inset-x-0 top-16 grid border-b border-indigo-950/10 bg-[#e0dff0]/90 backdrop-blur transition-all duration-300 ease-out sm:hidden motion-reduce:transition-none dark:border-neutral-800 dark:bg-neutral-950/90 ${menuOpen
                         ? "visible grid-rows-[1fr] opacity-100"
                         : "invisible grid-rows-[0fr] opacity-0"
                     }`}
@@ -146,7 +146,7 @@ export default function Navbar() {
                                     handleLinkClick(link.label);
                                     setMenuOpen(false);
                                 }}
-                                className={`rounded-lg px-3 py-2.5 text-sm font-medium transition-colors duration-200 ${activeLink === link.label
+                                className={`rounded-lg px-3 py-2.5 text-sm font-semibold transition-colors duration-200 ${activeLink === link.label
                                         ? "text-neutral-900 dark:text-neutral-50 dark:[text-shadow:0_0_14px_rgba(168,85,247,0.9)]"
                                         : "text-neutral-600 hover:bg-neutral-100 hover:text-neutral-900 dark:text-neutral-400 dark:hover:bg-neutral-800 dark:hover:text-neutral-100"
                                     }`}
@@ -157,7 +157,7 @@ export default function Navbar() {
                         <a
                             href="#"
                             onClick={() => setMenuOpen(false)}
-                            className="mt-3 inline-flex items-center justify-center rounded-lg bg-neutral-900 px-4 py-2.5 text-sm font-semibold text-white transition-all duration-200 hover:bg-neutral-700 dark:bg-neutral-100 dark:text-neutral-900 dark:hover:bg-neutral-300"
+                            className="mt-3 inline-flex items-center justify-center rounded-lg bg-neutral-900 px-4 py-2.5 text-sm font-bold text-white transition-all duration-200 hover:bg-neutral-700 dark:bg-neutral-100 dark:text-neutral-900 dark:hover:bg-neutral-300"
                         >
                             Get started
                         </a>
