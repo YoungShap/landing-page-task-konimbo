@@ -3,13 +3,16 @@
 import { useEffect, useState } from "react";
 
 export default function ThemeToggle() {
-    const [isDark, setIsDark] = useState(false);
+    // Default is dark (ignores the OS preference). If the user has toggled before,
+    // their saved choice wins. The pre-paint script in app/layout.tsx applies the same rule.
+    const [isDark, setIsDark] = useState(true);
 
-    // On first load: use saved choice, otherwise follow system preference
     useEffect(() => {
-        const saved = localStorage.getItem("theme");
-        const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-        const dark = saved ? saved === "dark" : prefersDark;
+        let saved: string | null = null;
+        try {
+            saved = localStorage.getItem("theme");
+        } catch {}
+        const dark = saved !== "light";
         document.documentElement.classList.toggle("dark", dark);
         setIsDark(dark);
     }, []);
@@ -18,7 +21,9 @@ export default function ThemeToggle() {
         const next = !isDark;
         setIsDark(next);
         document.documentElement.classList.toggle("dark", next);
-        localStorage.setItem("theme", next ? "dark" : "light");
+        try {
+            localStorage.setItem("theme", next ? "dark" : "light");
+        } catch {}
     }
 
     return (
