@@ -62,6 +62,11 @@ export default function Home() {
           aria-hidden="true"
           className="absolute inset-x-3 top-16 -bottom-2 -z-10 rounded-3xl bg-gradient-to-br from-indigo-500/45 via-fuchsia-500/36 to-sky-500/45 blur-2xl sm:inset-x-2 sm:top-12 sm:-bottom-3 sm:from-indigo-500/52 sm:via-fuchsia-500/44 sm:to-sky-500/52 dark:hidden"
         />
+        {/* Dark mode: card-hugging back-light (quieter than light mode's) so the form has a visible halo, incl. on mobile */}
+        <div
+          aria-hidden="true"
+          className="absolute inset-x-1 top-10 -bottom-4 -z-10 hidden rounded-3xl bg-gradient-to-br from-indigo-500/30 via-purple-500/24 to-sky-500/30 blur-2xl dark:block sm:inset-x-0 sm:top-8 sm:-bottom-5"
+        />
 
       <form
         onSubmit={handleSubmit}
